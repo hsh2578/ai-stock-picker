@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f8f9fb;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f0f4ff;
+  --bg-header: linear-gradient(135deg, #1a1f36 0%, #2d3561 100%);
+  --text: #374151;
+  --text-strong: #111827;
+  --text-muted: #9ca3af;
+  --text-light: #6b7280;
+  --accent: #3b82f6;
+  --accent-light: #dbeafe;
+  --accent-bg: rgba(59, 130, 246, 0.08);
+  --success: #10b981;
+  --success-bg: rgba(16, 185, 129, 0.08);
+  --warning: #f59e0b;
+  --warning-bg: rgba(245, 158, 11, 0.08);
+  --danger: #ef4444;
+  --danger-bg: rgba(239, 68, 68, 0.06);
+  --border: #e5e7eb;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-lg: 0 4px 12px rgba(0,0,0,0.08);
+
+  font-family: 'Pretendard', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+* { box-sizing: border-box; margin: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: #2563eb; }
+
+/* ─── 카드 ─── */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  transition: all 0.2s ease;
+}
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.card-flat {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+/* ─── 뱃지 ─── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.badge-success { background: var(--success-bg); color: var(--success); }
+.badge-warning { background: var(--warning-bg); color: var(--warning); }
+.badge-danger { background: var(--danger-bg); color: var(--danger); }
+.badge-info { background: var(--accent-bg); color: var(--accent); }
+
+/* ─── 확신도 도넛 ─── */
+.confidence-ring {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.confidence-ring::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: var(--bg-card);
+}
+.confidence-ring span {
+  position: relative;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* ─── 네비 ─── */
+.nav-bar {
+  background: white;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}

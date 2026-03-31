@@ -1,0 +1,11 @@
+.env
+cache/
+__pycache__/
+*.pyc
+.playwright-mcp/
+notion_snapshot.md
+한국투자증권*
+API키*
+web/node_modules/
+web/dist/
+*.png
